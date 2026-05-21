@@ -6,9 +6,9 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "notes"
-    label: "English Notes"
-    folder: "notes"
+  - name: "posts"
+    label: "Posts"
+    folder: "posts"
     create: true
 
     fields:
@@ -16,4 +16,4 @@ collections:
 
       - { label: "Description", name: "description", widget: "text" }
 
-      - { label: "PDF", name: "pdf", widget: "file" }
+      - { label: "Image", name: "image", widget: "image" }
