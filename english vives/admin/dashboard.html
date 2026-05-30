@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#f3f4f6;
+padding:30px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+button{
+padding:10px 15px;
+background:#dc2626;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+<h1>Daily English Vibes Admin</h1>
+<p>Welcome Admin 🎉</p>
+
+<button onclick="logout()">
+Logout
+</button>
+</div>
+
+<div class="card">
+<h2>Posts</h2>
+<p>Yahan future me posts manage karenge.</p>
+</div>
+
+<div class="card">
+<h2>Quotes</h2>
+<p>Yahan future me quotes manage karenge.</p>
+</div>
+
+<div class="card">
+<h2>Vocabulary</h2>
+<p>Yahan future me vocabulary manage karenge.</p>
+</div>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import {
+getAuth,
+signOut
+}
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+const firebaseConfig = {
+apiKey:"AIzaSyCDWRx_VD-VG-BzNkMvCfH5KH1m3eELmuM",
+authDomain:"daily-english-vibes-76cb0.firebaseapp.com",
+projectId:"daily-english-vibes-76cb0",
+appId:"1:547934225783:web:761083a83caa0870b0cd72"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+window.logout = async function(){
+
+await signOut(auth);
+
+window.location.href =
+"login.html";
+
+}
+
+</script>
+
+</body>
+</html>
